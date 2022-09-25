@@ -1,0 +1,23 @@
+Setup virtual env
+```shell script
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+```
+
+Run the server with 
+```
+cd interview
+python manage.py runsever localhost:3001
+```
+
+Go to `localhost:3001`. 
+Follow the consent link on the page 
+After clicking on the `I Agree` button, you will be redirected back to `localhost:3001` with content of decrypted data displayed on the page. 
+
+The decrypted content will be written to data.json file. Next time you visit to the page `localhost:3001` you will not go through the same process like above. If you're inclined to do so, please kindly remove the `data.json` file.
+
+I added a couple of tests in `interview/tests`. To run them, please use 
+```
+python manage.py test
+```
